@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                overflow: hidden;
+                background-color:rgb(228, 140, 139);
+                margin: 0px 150px 0px 70px;
+                background-image: url(https://wallpapers.com/images/hd/light-brown-background-5lmiajcgyqk09d2f.jpg);
+
+                
+            }
+            input{
+                height: 18px;
+                width: 100px;
+                border-radius: 5px;
+                }
+                form{
+                    margin: 0px 150px 50px 70px;
+    
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210206/pngtree-light-effect-blur-halo-background-image_556813.jpg);
+    background-repeat: no-repeat;
+                background-size: cover;
+
+                }
+                
+        </style>
+        <script>
+
+            
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+            function f1(){
+            
+            
+            document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+    var name=document.myform.name.value;
+           var password=document.myform.password.value;
+          var phno=document.myform.ph.value;
+           var mail=document.myform.email.value;
+           var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+           var phoneRegex = /^\d{10}$/;
+           const m = document.querySelector('.male');
+            const f = document.querySelector('.female');
+            var checkboxes = document.getElementsByName("lang");
+           var selectedLanguages = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+           var addr=document.myform.add.value;
+          var btech_per=document.myform.bper.value;
+          var inter_per=document.myform.iper.value;
+          var ssc_per=document.myform.sper.value;
+
+
+           if (name==null || name==""){
+             
+               // <span id="f_error_msg"></span>
+                alert("Name can't be blank");
+               // document.myframe.name.focus();
+               
+               return false;
+           }
+           
+               if(password.lenght<6){
+               alert("Password must be at least 6 letters long");
+               //  document.myframe.password.focus();
+               return false;
+               } 
+               if(password==null || password=="")
+               {
+                   alert("password has to be entered");
+                   //  document.myframe.password.focus();
+                   return false;
+               }
+               if (!emailRegex.test(mail)) {
+           alert("Invalid email format");
+         
+
+           return false;
+       }
+      
+ if(!m.checked && !f.checked){
+   alert('Please choose your Gender: Male or Female ')
+   return false;
+ }
+ if (selectedLanguages.length === 0) {
+           alert("Please select at least one language");
+           return false;
+       }
+
+       if (!phoneRegex.test(phno)) {
+           alert("Invalid phone number format. Please enter a 10-digit number");
+           // document.myform.phone.focus();
+           return false;
+       }
+
+         if (addr==null || addr==""){
+             
+             // <span id="f_error_msg"></span>
+              alert("enter the address");
+             // document.myframe.name.focus();
+             
+             return false;
+         }
+         if (btech_per==null || btech_per==""){
+             
+             // <span id="f_error_msg"></span>
+              alert("Enter your btech percentage");
+             // document.myframe.name.focus();
+             
+             return false;
+         }
+         if (inter_per==null || inter_per==""){
+             
+             // <span id="f_error_msg"></span>
+              alert("Enter your intermediate percentage");
+             // document.myframe.name.focus();
+             
+             return false;
+         }
+         if (ssc_per==null || ssc_per==""){
+             
+             // <span id="f_error_msg"></span>
+              alert("Enter your SSC percentage");
+             // document.myframe.name.focus();
+             
+             return false;
+         }
+       alert("Your data has been recorded!");
+           return false;
+           
+       return true;
+   }         
+
+</script>
+
+    </head>
+    <body >
+        <form>
+                <legend align="center"><h2>REGISTRATION FORM</h2></legend>
+                <table>
+                    <tr>
+                        <td><b>PERSONAL DETAILS</b></td>
+                    </tr>
+                    <tr>
+                    <td>NAME</td>
+                    <td><input type="text" name="un" required></td>
+                    
+                    </tr>
+                    <tr>
+                        <td>EMAIL</td>
+                        <td><input type="email" name="un" required></td>
+                    </tr>
+                   
+                    <tr>
+                        <td>GENDER</td>
+                        <td><input type="radio" name="gen">M
+                            <input type="radio" name="gen">F
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>LANGUAGES</td>
+                        <td><input type="checkbox" name="lang">TELUGU
+                            <input type="checkbox" name="lang">ENGLISH
+                            <input type="checkBOX" name="lang">HINDI
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RELIGION</td>
+                        <td><select name="rel" >
+                            <option value="hindu">HINDU</option>
+                            <option value="muslium">MUSLIUM</option>
+                            <option value="CHRISTIAN">CHRISTIAN</option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>DOB</td>
+                        <td><input type="date" name="dob"></td>
+                    </tr>
+                    <tr>
+                        <td>MOBILE NO</td>
+                        <td><input type="tel" name="number"></td>
+                    </tr>
+                    <tr>
+                        <td>ADDRESS</td>
+                        <td><textarea rows="5" cols="15"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><h4>EDUCATIONAL DETAILS</h4></td>
+                    </tr>
+                    <tr>
+                        <td>BTECH %</td>
+                        <TD><input type="text" name="un" required></TD>
+                    </tr>
+                    <tr>
+                        <td>INTER %</td>
+                        <TD><input type="text" name="un" required></TD>
+                    </tr>
+                    <tr>
+                        <td>SSC %</td>
+                        <TD><input type="text" name="un" required></TD>
+                    </tr>
+                    <tr>
+                        <td>UPLOAD</td>
+                        <td><input type="file"name="upload"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="submit"></td>
+                        <td><input type="reset" name="reset"></td>
+                    </tr>
+
+                </table>
+    
+        </form>
+    </body>
+</html>

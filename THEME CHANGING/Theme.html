@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<style>
+			.left{
+				float: left;
+				
+				margin-top: 1%;
+				padding: 5%;
+				height: 450px;
+				overflow: hidden;
+				background-color: rgb(210, 243, 243)
+				;
+			}
+			.top{
+				float:top;
+				margin-top: 0%;
+				padding: 2px;
+				height: 150px;
+				background-color: #99c68e;
+			}
+			.right{
+				margin-top: 1%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+			}
+        
+    
+            .image{
+                width: 100%;
+                height: 15%;
+                max-width: 100%;
+                
+            
+			}
+			a:hover{
+						color: rgb(64, 210, 210);
+						border-radius: 50px;
+			
+					}
+					a:link{
+						text-decoration: none;
+						color: blue;
+			
+					}
+			h1{
+                font-weight: bold;
+                margin-top: auto;
+                margin-left:150px;
+            }
+			.image2{
+				float: left;
+	
+
+			}
+			body{
+				overflow: hidden;
+				
+			}
+			button:hover{
+				font-size: larger;
+			}
+			button{
+				border: none;
+				
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 15px;
+				
+				cursor: pointer;
+				color:rgb(171, 70, 171);
+
+			}
+            
+					</style>
+	</head>
+	<body>
+	<div class="main">
+		<div class="top" id="box">
+		
+			<table>
+			<tr><td><img  class="image2" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Anits_logo.jpg" width="150" height="130"></td>
+			<td><h1>ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES</h1></td>
+			<table>
+		
+		</div>
+		<div class="left">
+		
+					<a href="universities.html" id="le">Universities</a>
+						<br><h4 style="color:purple;">Departments</h4>
+						<ul type="disc" >
+							<a href="csedetails.html" ><li>CSE</li></a>
+						<a href="ecedetails.html" ><LI>ECE</LI></a>
+						<a href="eeedetails.html" ><li>EEE</li></a> <br>
+				
+						</ul>
+				<a href="timetable.html" id="ti">TIMETABLE</a><br>
+				<a href="resume.html" id="re">RESUME</a><br><br>
+				<button id="btn">THEME1</button><br><br>
+				<button id="bt">THEME2</button>
+				
+				
+		</div>
+	
+	<div class="right" >
+		
+        <img class="image" src="https://i.ytimg.com/vi/eS36IpEMTak/maxresdefault.jpg" id="im">
+    
+
+	</div>
+	</div>
+	<script>
+		const btn = document.getElementById('btn');
+		const bt=document.getElementById("bt");
+		const box = document.getElementById('box');
+			
+
+			btn.addEventListener('click', function onChange(event)
+			{
+			
+			document.body.style.backgroundColor = 'lightblue';
+			document.body.style.fontSize="20px";
+			document.body.style.fontFamily="cursive";
+			document.getElementById("im").src="https://storage.googleapis.com/ezap-prod/colleges/7602/anil-neerukonda-institute-of-technology-and-sciences-visakhapatnam-campus.jpg";
+			document.getElementById("le").style.color="red";
+			document.getElementById("ti").style.color="red";
+			document.getElementById("re").style.color="red";
+			box.style.backgroundColor = 'lavender';
+			});
+			bt.addEventListener('click', function onClick(event)
+			{
+		
+			document.body.style.backgroundColor = 'pink';
+			document.body.style.fontSize="30px";
+			document.body.style.fontFamily="lucida sans";
+			document.getElementById("im").src="https://content3.jdmagicbox.com/comp/visakhapatnam/97/0891p891std86697/catalogue/anil-neerukonda-institute-of-technology-and-sciences-bheemunipatnam-visakhapatnam-colleges-jr7p9ufczn.jpg";
+			document.getElementById("le").style.color="blue";
+			document.getElementById("ti").style.color="yellow";
+			document.getElementById("re").style.color="red";
+box.style.backgroundColor = 'brown';
+			});
+
+	</script>
+
+	</body>
+</html>
